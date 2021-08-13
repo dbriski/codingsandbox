@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  padding: 1rem;
+}
+
+.hero {
+  min-height: 90vh;
+  background-image: url("/pexels-andrew-neel-2312369.jpg");
+  background-size: contain;
+  background-position: center;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h2 {
+  text-align: center;
+  margin: 2rem;
+}
+
+.hero button {
+  padding: 1rem 2rem;
+  background: rgb(151, 240, 198);
+  border: none;
+}
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.intro img {
+  width: 100%;
+}
+
+.intro-img {
+  flex: 1 1 20rem;
+  background: lightblue;
+}
+
+.intro-text {
+  flex: 1 1 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-text h2 {
+  padding: 1rem;
+}
+
+.intro-text p {
+  padding: 1rem;
+}
