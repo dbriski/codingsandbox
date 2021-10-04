@@ -269,6 +269,12 @@ footer ul {
   align-items: center;
 }
 
+button:focus {
+  background: #27394e;
+  outline-style: solid;
+  outline-color: cornflowerblue;
+}
+
 
 
 
