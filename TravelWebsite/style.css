@@ -192,6 +192,7 @@ nav ul {
 
 .card h4, p {
   padding: 1rem;
+  line-height: 1.8;
 }
 
 .card-icon {
