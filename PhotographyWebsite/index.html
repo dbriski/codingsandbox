@@ -17,16 +17,15 @@
   <header class="main-head">
     <nav>
       <h1 id="logo">Dora the Wolf</h1>
-      <input type="checkbox" class="menu-check">
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="burger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span class="line1"></span>
+        <span class="line2"></span>
+        <span class="line3"></span>
       </div>
     </nav>
   </header>
@@ -59,7 +58,7 @@
         >
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div class="about-image">
         <h5>MINIMAL</h5>
         <img 
@@ -88,6 +87,72 @@
         </div>
       </div>
     </section>
+    <section>
+      <div class="gallery" id="gallery">
+        <header>
+          <h2>Quality Photography</h2>
+          <p>My work pictures that I took</p>
+        </header>
+        <img class="gallery1" 
+        src="/Starter Files/img/gallery-1.jpg" 
+        alt="man in suit">
+        <img class="gallery2" 
+        src="/Starter Files/img/gallery-2.jpg" 
+        alt="lady in coat">
+        <img class="gallery3" 
+        src="/Starter Files/img/gallery-3.jpg" 
+        alt="lady in t-shirt">
+        <img class="gallery4" 
+        src="/Starter Files/img/gallery-4.jpg" 
+        alt="lady in jacket">
+      </div>
+      <section class="contact" id="contact">
+        <div class="form-wrapper flex">
+          <h2>Get in <br/> 
+            <span> touch.</span>
+          </h2>
+          <form>
+            <label 
+            for="email">Your Email:</label>
+            <input 
+            type="email" 
+            id="email required">
+            <button 
+            type="submit">Submit</button>
+          </form>
+        </div>
+        <img 
+        src="/Starter Files/img/contact-image.jpg" 
+        alt="dora-the-wolf">
+      </section>
+    </section>
   </main>
+  <footer>
+    <h4>Dora the Wolf &copy; 2021</h4>
+    <ul>
+      <li>
+        <a href="#">
+          <img 
+          src="/Starter Files/img/youtube-symbol 1.svg" 
+          alt="youtube-social-media">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img 
+          src="/Starter Files/img/twitter 1.svg" 
+          alt="twitter-social-media">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img 
+          src="/Starter Files/img/instagram 1.svg" 
+          alt="instagram-social-media">
+        </a>
+      </li>
+    </ul>
+  </footer>
+  <script src="/app.js"></script>
 </body>
 </html>

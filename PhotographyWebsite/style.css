@@ -28,10 +28,11 @@ html {
     --header3: calc(3rem + 1vw);
     --header4: calc(2.4rem + 1vw);
     --text: calc(1.5rem + 1vw);
-    --big: calc(2.4rem + 1vw);
+    --big: calc(6rem + 1vw);
     --special-color: #906272;
     --background-color: #414141;
     --gray-text: #525252;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -191,7 +192,7 @@ nav {
   }
 }
 
-.burger, .menu-check{
+.burger{
   display: none;
 }
 /* ABOUT SECTION */
@@ -242,6 +243,108 @@ nav {
   object-fit: cover;
 }
 
+/* Gallery */
+.gallery {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery1{
+  grid-column: 1/3;
+}
+
+.gallery2{
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+
+.gallery header{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: var(--background-color);
+  padding: 5rem 10rem;
+  text-align: center;
+}
+
+/* Contact section */
+
+.contact {
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-wrapper{
+  flex: 3 1 40rem;
+}
+
+.form-wrapper h2{
+  margin: 5rem 0rem;
+}
+
+.form-wrapper span{
+  font-size: var(--big);
+  color: var(--special-color);
+}
+
+.form-wrapper label{
+  display: block;
+}
+
+.form-wrapper input{
+  display: block;
+  margin: 3rem 0rem;
+  background: var(--background-color);
+  color: white;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+}
+
+.form-wrapper button{
+  padding: 1rem 8rem;
+  background: var(--special-color);
+  color: white;
+  border: none;
+}
+
+.contact img{
+  flex: 1 1 40rem;
+}
+
+/* Footer section */
+footer {
+  background: var(--background-color);
+  color: white;
+  display: flex;
+  padding: 3rem 5%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer ul{
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer h4{
+  flex: 3 1 40rem;
+  font-size: calc(1.4rem + 1vw);
+}
+
 @media screen and (max-width:842px){
   .hero {
     width: 100%;
@@ -252,9 +355,10 @@ nav {
   }
 
   /* BURGER THING */
-  .burger {
+  .burger{
     position: relative;
     display: block;
+    cursor: pointer;
   }
 
   .burger span{
@@ -271,7 +375,7 @@ nav {
     text-decoration: underline;
   }
 
-  .nav-links {
+  .nav-links{
     background: var(--background-color);
     width: 100%;
     height: 100%;
@@ -283,41 +387,66 @@ nav {
     transition: transform 1s ease;
   }
 
-  .menu-check {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translate(5%, -50%);
-    width: 5rem;
-    height: 5rem;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 100;
-  }
-
-  .menu-check:checked + .nav-links{
+  .nav-open{
     transform: translateX(-100%);
   }
 
-  .menu-check:checked ~ .burger span{
+  .toggle .line1{
+    transform: rotateZ(45deg) translateY(300%);
     background: white;
   }
 
-  .menu-check:checked ~ .burger span:nth-child(1){
-    transform: rotateZ(45deg) translateY(300%);
+  .toggle .line2{
+    opacity: 0;
   }
 
-  .menu-check:checked ~ .burger span:nth-child(2){
-    opacity: 0;;
-  }
-
-  .menu-check:checked ~ .burger span:nth-child(3){
+  .toggle .line3{
     transform: rotateZ(-45deg) translateY(-300%);
+    background: white;
   }
 
 /* About section */
 .about-text div{
   padding: 3rem 3rem;
 }
+
+/* Gallery */
+.gallery img{
+  grid-row: auto;
+  grid-column: auto;
+}
+
+.gallery{
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+.gallery header{
+  display: none;
+}
+
+/* Contact section */
+.contact img{
+  display: none;
+}
+
+footer ul{
+  order: 1;
+}
+
+footer h4{
+  order: 2;
+  text-align: center;
+  padding: 1rem;
+}
+}
+
+@media screen and (min-width: 1200px) {
+  html{
+    --header1: 3rem;
+    --header2: 4.5rem;
+    --header3: 4rem;
+    --header4: 3rem;
+    --text: 3rem;
+    --big: 8rem;
+  }
 }
