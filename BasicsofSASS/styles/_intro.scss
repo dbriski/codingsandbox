@@ -1,0 +1,22 @@
+.introduction {
+    min-height: 90vh;
+    @include flex(column, space-around, center);
+    background: lightgreen;
+  
+    h2 {
+      font-size: $big-size;
+    }
+  
+    button {
+      border: none;
+      background: $primary;
+      padding: 1rem 3rem;
+      transition: all 1s ease;
+      cursor: pointer;
+      &:hover{
+        background: lightblue;
+      }
+    }
+  }
+
+ 
