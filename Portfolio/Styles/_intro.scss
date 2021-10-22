@@ -71,3 +71,58 @@ nav {
 .intro-images{
     flex: 1 1 40rem;
 }
+
+#Smoke{
+    animation: smoke 7s ease-out infinite normal;
+}
+
+#Head{
+    animation: head 2s ease-in-out infinite alternate;
+    transform-origin: center;
+} 
+
+#Body{
+    animation: body 3s ease-in-out infinite alternate;
+}
+
+#clock-arrow{
+    animation: arrow 3s linear infinite;
+    transform-box: fill-box;
+    transform-origin: bottom;
+}
+
+@keyframes smoke{
+    from{
+        transform: translateY(50%);
+    }
+    to {
+        transform: translateY(-5%);
+    }
+}
+
+@keyframes head {
+    from{
+        transform: rotateZ(1deg);
+    }
+    to {
+        transform: rotateZ(-1deg);
+    }
+}
+
+@keyframes body{
+    from{
+        transform: translateY(0.5rem);
+    }
+    to{
+        transform: translateY(-0rem);
+    }
+}
+
+@keyframes arrow {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
